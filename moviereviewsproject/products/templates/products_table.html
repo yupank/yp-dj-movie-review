@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Products Table </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h3 class="card-title"> Table Placeholder</h3>
+            <!-- <h4> {{ products.id}} </h4>
+            <h5> {{ products.price}} </h5> -->
+            <!-- {% for news in newss %}
+                <h2> {{ news.headline }} </h2>
+                <h5> {{ news.date }} </h5>
+                <p> {{ news.body }} </p>
+            {% endfor %} -->
+        </div>
+        <div class="container text-center">
+            <div class="row">
+                <!-- <div class="col-4" style="  background-color: beige; border-color: blueviolet; border: width 12px;">Left commands -->
+                <div class="col-4" >Left commands
+                    <p class="text-start fs-6 " style="width: 8rem;">
+                        <a class="text-reset" href="#begin-print">begin-print</a><br/>
+                        <a href="#createcustomwidget">create-custom-
+                        widget</a><br/>
+                        <a href="#customwidgetapply">custom-widget-apply</a><br/>
+                        <a class="bg-success p-2 text-dark bg-opacity-50" href="#done">done</a><br/>
+                        <a href="#drawpage">draw-page</a><br/>
+                        <a href="#endprint">end-print</a><br/>
+                        <a class="bg-danger p-1 text-dark bg-opacity-90" href="{% url 'product_list' %}">Preview</a><br/>
+                        <a href="#requestpagesetup">request-page-setup</
+                        a><br/>
+                        <a href="#statuschanged">status-changed</a>
+                    </p>
+                </div>
+                <div class="col-8" style="background-color:rgb(188, 216, 220);">col-8
+                    <h1> Gtk Operations </h1>
+                    <p>The following table describes the signals used by the GtkPrintOperations</p>
+                    <table class="border border-4 border-primary" style="height: 100px;">
+                        <thead> 
+                            <tr class="border border-1 border-primary-subtle">
+                                <th>Signal Name</th>
+                                <th>Additional Parameters</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td width="25%"><a id="beginprint"/>
+                                begin-print</td>
+                                <td width="25%">GtkPrintContext *context</td>
+                                <td width="50%">The user just finished
+                                changing printer settings but
+                                                rendering has not yet
+                                                begun.</td>
+                            </tr> 
+                            <tr>
+                                    <td width="25%"><a id="createcustomwidget"/>
+                                    create-custom-widget</td>
+                                    <td width="25%">None</td>
+                                    <td width="50%">The dialog was just
+                                    displayed. You can return a
+                            </tr>
+                            <tr>
+                                <td width="25%"><a id="done"/>done</td>
+                                <td width="25%">GtkPrintOperationResult
+                                result</td>
+                                <td width="50%">Printing completed, and you
+                                can now view the result.
+                                                You should use gtk_print_
+                                                operation_get_error() to
+                                                check the error message if
+                                                the result was
+                                                GTK_PRINT_OPERATION_RESULT_
+                                                ERROR.</td>
+                            </tr>
+                          <!-- <tr>
+                            <td class="align-baseline">baseline</td>
+                            <td class="align-top">top</td>
+                            <td class="align-middle">middle</td>
+                            <td class="align-bottom">bottom</td>
+                            <td class="align-text-top">text-top</td>
+                            <td class="align-text-bottom">text-bottom</td>
+                          </tr> -->
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4" style="--bs-secondary-bg: 3" >
+                    <div class="p-3 text-bs-secondary-bg border border-primary-subtle rounded-3">
+                        Example element with utilities
+                      </div>
+                </div>
+                <div class="col-md-auto bg-warning p-2 text-dark bg-opacity-75">Variable with content</div>
+            </div>
+        </div>
+        <div id="content">
+            <!---Begin  content menu column -->
+
+
+
+            <div class ="content-left">
+                <!-- <p>
+                    <a href="#begin-print">begin-print</a><br/>
+                    <a href="#createcustomwidget">create-custom-
+                    widget</a><br/>
+                    <a href="#customwidgetapply">custom-widget-apply</
+                    a><br/>
+                    <a href="#done">done</a><br/>
+                    <a href="#drawpage">draw-page</a><br/>
+                    <a href="#endprint">end-print</a><br/>
+                    <a href="{% url 'product_list' %}">Preview</a><br/>
+                    <a href="#requestpagesetup">request-page-setup</
+                    a><br/>
+                    <a href="#statuschanged">status-changed</a>
+                </p> -->
+            </div>
+            <!-- Beging content colummn -->
+            <div id="content-right">
+                <h1> Gtk Operations </h1>
+                <p>The following table describes the signals used by the GtkPrintOperations</p>
+                
+            </div>
+        </div>
+    </body>
+</html>

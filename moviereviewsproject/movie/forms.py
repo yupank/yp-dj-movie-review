@@ -14,4 +14,3 @@ class ReviewForm(ModelForm):
         widgets = {'text': Textarea(attrs={'rows':4}), 'rating': NumberInput()}
         # fields = ['text', 'watchAgain']
         labels = {'watchAgain': ('Watch Again')}
-        # widgets = {'text': Textarea(attrs={'rows':4})}

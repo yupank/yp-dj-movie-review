@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+{% block content %}
+  {% for prod in products %}
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div>
+        <div class="card-body">
+            <h5 class="card-title">{{ prod.name }}</h5>
+            <p class="card-text"> Group: {{ prod.group }}</p>
+            <p class="card-text"><small class="text-muted">
+            Emissions {{ prod.emission }}
+            </small></p>
+            {%if prod.rating == 1 %}
+                <p class="bg-success p-2 text-dark bg-opacity-50">Rating: {{prod.rating}} </a>
+            {% elif prod.rating == 2 %}
+                <p class="bg-warning p-2 text-dark bg-opacity-50">Rating: {{prod.rating}} </a>
+            {% else %}
+                <p class="bg-danger p-2 text-light bg-opacity-50">Rating: {{prod.rating}} </a>
+            {% endif %}
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock content %}

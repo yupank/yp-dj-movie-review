@@ -7,6 +7,8 @@ class Movie(models.Model):
     description = models.CharField(max_length=250)
     image = models.ImageField(upload_to='movie/images')
     url = models.URLField(blank=True)
+    def __str__(self)->str:
+        return self.title
 
 class Review(models.Model):
     text = models.CharField(max_length=100)
@@ -16,4 +18,4 @@ class Review(models.Model):
     rating = models.DecimalField(decimal_places=1, max_digits=3)
     watchAgain = models.BooleanField()
     def __str__(self) -> str:
-        return self.text, self.rating
+        return self.text + str(self.rating)
